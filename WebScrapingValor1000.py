@@ -20,15 +20,16 @@ driver = webdriver.Firefox()
 driver.get(url)
 time.sleep(10)
 
-driver.find_element_by_xpath(
-    "/html/body/div[5]/div[1]/div[3]/div/div/div/div[2]/div[2]/table/tbody/tr[1]/td[1]/p").click()
+''' driver.find_element_by_xpath(
+    "/html/body/div[5]/div[1]/div[3]/div/div/div/div[2]/div[2]/table/tbody/tr[1]/td[1]/p").click() '''
 
 element = driver.find_element_by_xpath("//html/body/div[5]/div[1]/div[3]/div/div/div/div[2]")
 #html_content = element.get_attribute("//div[@class='tabelao']")
 html_content = element.get_attribute("html_content")
 #2. Parsear o conteúdo HTML - BeautfulSoup
-soup = BeautifulSoup(html_content, "html.parser")
-table =soup.find(name='tabelao')
+soup = bs4.BeautifulSoup(html.text)
+#table =soup.find(name='tabelao')
+
 #3. Estruturar o conteúdo em um Data Frame - Pandas
 #4. Transformar os Dados em um Dicionário de dados próprio
 driver.quit()

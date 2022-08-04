@@ -9,6 +9,7 @@ requests2 = "*"
 lxml = "*"
 bs4 = "*"
 selenium = "*"
+tabulate = "*"
 
 [dev-packages]
 
