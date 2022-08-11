@@ -17,4 +17,4 @@ table_str = str(tabela)
 df = pd.read_html(table_str)[0]
 display(df)
 
-print(tabela)
+print(tabela) 
