@@ -4,9 +4,13 @@ import lxml
 
 #1. Pegar conteúdo HTML a partir da URL
 url = 'https://especial.valor.com.br/valor1000/2021/ranking1000maiores'
-html = pd.read_html(url, match = '' )
-print(type(html))
-df = html[0]
-print(type(df))
+part1 = pd.read_html(url, match = '')
+part2 = pd.read_html(url, match = 'Sede')
 
-df.to_excel("foo.xlsx", sheet_name="Sheet1")
+df1 = part1[0]
+df2 = part2[0]
+
+# Organiza os DataFrames lado a lado
+df_stack = pd.concat([df1, df2], axis=1)
+
+df_stack.to_excel("valor1000.xlsx", sheet_name="Sheet1")
