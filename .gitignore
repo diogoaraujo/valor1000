@@ -9,7 +9,7 @@ __pycache__/
 *.csv
 *.xls
 *.xlsx
-
+*.zip
 # Distribution / packaging
 .Python
 build/
