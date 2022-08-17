@@ -4,9 +4,9 @@ import lxml
 
 #1. Pegar conteúdo HTML a partir da URL
 url = 'https://especial.valor.com.br/valor1000/2021/ranking1000maiores'
-html = pd.read_html(url, match ="Classificação")
+html = pd.read_html(url, match = '' )
 print(type(html))
 df = html[0]
 print(type(df))
 
-
+df.to_excel("foo.xlsx", sheet_name="Sheet1")
