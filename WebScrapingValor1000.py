@@ -1,8 +1,4 @@
-import sys
 import pandas as pd
-import numpy as np
-import lxml
-from urllib.parse import urlparse
 
 
 f=2013
