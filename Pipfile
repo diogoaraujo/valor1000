@@ -8,6 +8,8 @@ requests2 = "*"
 pandas = "*"
 openpyxl = "*"
 numpy = "*"
+lxml = "*"
+urllib3 = "*"
 
 [dev-packages]
 
